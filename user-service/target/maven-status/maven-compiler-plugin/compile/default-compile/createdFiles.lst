@@ -1,7 +1,0 @@
-com\userservice\userservice\vo\ResponseTemplateVO.class
-com\userservice\userservice\repository\UserRepository.class
-com\userservice\userservice\controller\UserController.class
-com\userservice\userservice\UserServiceApplication.class
-com\userservice\userservice\service\UserService.class
-com\userservice\userservice\vo\Department.class
-com\userservice\userservice\entity\User.class
