@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1A1A2E, #16213E);
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        table {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background: #EAEAEA;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-in-out;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            font-size: 18px;
+            color: #222; /* Darker text for better readability */
+        }
+        th {
+            background: #6A5ACD; /* Slate Blue */
+            color: #FFF;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background: #D1D1D1;
+        }
+        tr:hover {
+            background: #A52A2A; /* Dark red hover */
+            color: white;
+            transition: 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Users List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
